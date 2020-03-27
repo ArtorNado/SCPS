@@ -3,18 +3,15 @@ package com.scps.data.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="users_lp")
+@Table(name="usr")
 public class User {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(name = "user_id")
     private Integer userId;
 
-    @Column(name = "user_login")
     private String userLogin;
 
-    @Column(name = "user_password")
     private String userPassword;
 
     public User() {

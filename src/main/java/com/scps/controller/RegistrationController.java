@@ -16,6 +16,11 @@ public class RegistrationController {
     @Autowired
     UserRepository userRepository;
 
+    @PostMapping("registration")
+    public String openRegistrPage(){
+        return "registration";
+    }
+
     @GetMapping("/registration")
     public String addUser(@RequestParam String login, @RequestParam String password, Map<String, Object> model){
         User userFromDb = userRepository.findByUserLogin(login);
